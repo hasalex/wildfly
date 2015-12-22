@@ -2,7 +2,9 @@ language: java
 jdk:
   - oraclejdk8
 script:
-- ./build.sh
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
+  - ./build.sh
 cache:
   directories:
   - "$HOME/.m2"
